@@ -21,3 +21,5 @@ GitPython
 coffeehouse
 pymongo
 heroku3
+selenium
+validators
