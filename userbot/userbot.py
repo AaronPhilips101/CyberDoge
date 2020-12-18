@@ -30,7 +30,7 @@ class Userbot(TelegramClient):
     def __init__(
             self, session, *, module_path="modules", storage=None,
             bot_token=None, enviroment=None, **kwargs):
-        self._name = "The-TG-Bot-v3"
+        self._name = "CyberDoge"
         self.storage = storage or (lambda n: Storage(Path("data") / n))
         self._logger = logging.getLogger("Userbot")
         self._modules = {}
@@ -81,7 +81,7 @@ class Userbot(TelegramClient):
     def load_module_from_file(self, path):
         path = Path(path)
         shortname = path.stem
-        name = f"_help.{self._name}.{shortname}"
+        name = f".{self._name}.{shortname}"
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.events = _events
