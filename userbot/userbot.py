@@ -47,35 +47,13 @@ class Userbot(TelegramClient):
             **kwargs
         }
 
-        self.tgbot = None
-        super().__init__(session, **kwargs)
-        self._event_builders = Reverse()
-        self.loop.run_until_complete(self._async_init(bot_token=bot_token))
-        core_module = Path(__file__).parent / "core.py"
-        self.load_module_from_file(core_module)
-
-        for a_module_path in Path().glob(f"{self._module_path}/*.py"):
-            self.load_module_from_file(a_module_path)
-
-        LOAD = self.env.LOAD
-        NO_LOAD = self.env.NO_LOAD
-        if LOAD or NO_LOAD:
-            to_load = LOAD
-            if to_load:
-                self._logger.info("Modules to LOAD: ")
-                self._logger.info(to_load)
-            if NO_LOAD:
-                for module_name in NO_LOAD:
-                    if module_name in self._modules:
-                        self.remove_module(module_name)
-
+    
     async def _async_init(self, **kwargs):
         await self.start(**kwargs)
         self.me = await self.get_me()
         self.uid = telethon.utils.get_peer_id(self.me)
         self._logger.info(f"Logged in as {self.uid}")
 
-    def load_module(self, shortname):
-        self.load_module_from_file(f"{self._module_path}/{shortname}.py")
+
 
    
