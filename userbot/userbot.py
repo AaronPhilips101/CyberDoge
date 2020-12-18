@@ -46,14 +46,3 @@ class Userbot(TelegramClient):
             "lang_code": "en",
             **kwargs
         }
-
-    
-    async def _async_init(self, **kwargs):
-        await self.start(**kwargs)
-        self.me = await self.get_me()
-        self.uid = telethon.utils.get_peer_id(self.me)
-        self._logger.info(f"Logged in as {self.uid}")
-
-
-
-   
