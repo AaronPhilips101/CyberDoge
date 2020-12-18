@@ -30,7 +30,7 @@ class Userbot(TelegramClient):
     def __init__(
             self, session, *, module_path="modules", storage=None,
             bot_token=None, enviroment=None, **kwargs):
-        self._name = "The-TG-Bot-v3"
+        self._name = "CyberDoge"
         self.storage = storage or (lambda n: Storage(Path("data") / n))
         self._logger = logging.getLogger("Userbot")
         self._modules = {}
@@ -42,7 +42,7 @@ class Userbot(TelegramClient):
             "api_id": 6,
             "api_hash": "eb06d4abfb49dc3eeb1aeb98ae0f581e",
             "device_model": "Userbot",
-            "app_version": "@The-TG-Bot v3",
+            "app_version": "@CyberDoge",
             "lang_code": "en",
             **kwargs
         }
@@ -89,7 +89,7 @@ class Userbot(TelegramClient):
         mod.humanbytes = humanbytes
         mod.progress = progress
         mod.time_formatter = time_formatter
-        mod.build = f"The-TG-Bot-v3{time.strftime('%d%m%Y', time.localtime(os.stat('./').st_mtime))}"
+        mod.build = f"CyberDoge{time.strftime('%d%m%Y', time.localtime(os.stat('./').st_mtime))}"
         mod.me = self.me
         mod.logger = logging.getLogger(shortname)
         mod.ENV = self.env
