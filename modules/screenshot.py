@@ -117,14 +117,3 @@ async def _(event):
                 await catevent.edit(str(e))
     else:
         await catevent.edit(f"`{response_api.text}`")
-
-
-CMD_HELP.update(
-    {
-        "screenshot": "**Plugin : **`screenshot`\
-        \n\n**Syntax : **`.ss <url>`\
-        \n**Function : **__Takes a screenshot of a website and sends the screenshot.__\
-        \n\n**Syntax : **`.scapture <url>`\
-        \n**Function : **__Takes a screenshot of a website and sends the screenshot need to set config var for this.__"
-    }
-)
