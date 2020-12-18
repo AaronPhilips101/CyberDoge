@@ -42,7 +42,7 @@ class Userbot(TelegramClient):
             "api_id": 6,
             "api_hash": "eb06d4abfb49dc3eeb1aeb98ae0f581e",
             "device_model": "Userbot",
-            "app_version": "@The-TG-Bot v3",
+            "app_version": "@CyberDoge",
             "lang_code": "en",
             **kwargs
         }
@@ -81,7 +81,7 @@ class Userbot(TelegramClient):
     def load_module_from_file(self, path):
         path = Path(path)
         shortname = path.stem
-        name = f"_UserbotModules.{self._name}.{shortname}"
+        name = f"_ping.{self._name}.{shortname}"
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.events = _events
@@ -89,7 +89,7 @@ class Userbot(TelegramClient):
         mod.humanbytes = humanbytes
         mod.progress = progress
         mod.time_formatter = time_formatter
-        mod.build = f"The-TG-Bot-v3{time.strftime('%d%m%Y', time.localtime(os.stat('./').st_mtime))}"
+        mod.build = f"CyberDoge{time.strftime('%d%m%Y', time.localtime(os.stat('./').st_mtime))}"
         mod.me = self.me
         mod.logger = logging.getLogger(shortname)
         mod.ENV = self.env
