@@ -1,6 +1,6 @@
 # CyberDoge
 
-[LOGO](https://github.com/AaronPhilips101/CyberDoge/blob/main/logo.png)
+[LOGO](https://github.com/AaronPhilips101/CyberDoge/blob/main/logo.png?raw=true)
 
 
 ## Disclaimer
