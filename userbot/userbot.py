@@ -21,28 +21,3 @@ import time
 class Reverse(list):
     def __iter__(self):
         return reversed(self)
-
-
-class Userbot(TelegramClient):
-
-    sync = sync
-
-    def __init__(
-            self, session, *, module_path="modules", storage=None,
-            bot_token=None, enviroment=None, **kwargs):
-        self._name = "CyberDoge"
-        self.storage = storage or (lambda n: Storage(Path("data") / n))
-        self._logger = logging.getLogger("Userbot")
-        self._modules = {}
-        self._on = self.on
-        self._module_path = module_path
-        self.env = enviroment
-
-        kwargs = {
-            "api_id": 6,
-            "api_hash": "eb06d4abfb49dc3eeb1aeb98ae0f581e",
-            "device_model": "Userbot",
-            "app_version": "@CyberDoge",
-            "lang_code": "en",
-            **kwargs
-        }
