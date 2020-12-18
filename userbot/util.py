@@ -126,3 +126,7 @@ def time_formatter(milliseconds: int) -> str:
         ((str(seconds) + "s, ") if seconds else "") + \
         ((str(milliseconds) + "ms, ") if milliseconds else "")
     return tmp[:-2]
+
+#experimental 
+
+from . import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
