@@ -6,6 +6,12 @@ import requests
 from selenium import webdriver
 from validators.url import url
 
+from ..utils import admin_cmd, edit_or_reply, sudo_cmd
+from . import CMD_HELP
+
+
+@client.on(events(pattern="ss (.*)"))
+@client.on(events(pattern="ss (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -70,6 +76,9 @@ async def _(event):
     except Exception:
         await catevent.edit(f"`{traceback.format_exc()}`")
 
+
+@client.on(events(pattern="scapture (.*)"))
+@client.on(events(pattern="scapture (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -117,3 +126,14 @@ async def _(event):
                 await catevent.edit(str(e))
     else:
         await catevent.edit(f"`{response_api.text}`")
+
+
+ENV.HELPER.update(
+    {
+        "screenshot": "**Plugin : **`screenshot`\
+        \n\n**Syntax : **`.ss <url>`\
+        \n**Function : **__Takes a screenshot of a website and sends the screenshot.__\
+        \n\n**Syntax : **`.scapture <url>`\
+        \n**Function : **__Takes a screenshot of a website and sends the screenshot need to set config var for this.__"
+    }
+)
