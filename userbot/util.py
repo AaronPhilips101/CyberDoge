@@ -126,11 +126,3 @@ def time_formatter(milliseconds: int) -> str:
         ((str(seconds) + "s, ") if seconds else "") + \
         ((str(milliseconds) + "ms, ") if milliseconds else "")
     return tmp[:-2]
-        try:
-            LOAD_PLUG[file_test].append(func)
-        except BaseException:
-            LOAD_PLUG.update({file_test: [func]})
-        return func
-
-    return decorator
-
