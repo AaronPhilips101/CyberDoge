@@ -10,11 +10,7 @@ from validators.url import url
 @client.on(events(pattern="ss (.*)"))
 @client.on(events(pattern="ss (.*)"))
 async def _(event):
-    if event.fwd_from:
-        return
-    if Config.CHROME_BIN is None:
-        await edit_or_reply(event, "Need to install Google Chrome. Module Stopping.")
-        return
+    
     catevent = await edit_or_reply(event, "`Processing ...`")
     start = datetime.now()
     try:
