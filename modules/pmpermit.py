@@ -19,12 +19,6 @@ THETGBOT_USER_BOT_NO_WARN = "\
 \nHe usually approves people but he dosent accept bitcoin scammers or retards tho.\
 \nIf you continue sending messages you will get yeeted out of my masters pm by me.```\
 "
-await client.send_file(
-        event.chat_id,
-        caption=help_string,
-        file="logo.png",
-        force_document=False,
-    )
 
 @client.on(events(outgoing=True, func=lambda e: e.is_private))
 async def auto_approve(event):
