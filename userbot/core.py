@@ -151,7 +151,7 @@ async def alive(event):
     username = f"\nUser: `@{me.username}\n"
     memory = psutil.virtual_memory()
     specs = f"`System: {uname.system}\nRelease: {uname.release}\nVersion: {uname.version}\nProcessor: {uname.processor}\nMemory [RAM]: {get_size(memory.total)}`"
-    help_string = f"**// Hemlo Frens CyberDoge here //**\n\n**General Info:**\n`Build Version: {build} {username}`Github Repository: `Private as it is still under development \(^^)/ \n\n**System Specifications:**\n{specs}\n```Python: {sys.version}```\n```Telethon: {__version__}```\n\n**My Creator/Developer:** [AaronPhilips](https://t.me/AaronPhilips101) \n**Support group:** [Join](https://t.me/CyberDoge_Support)"
+    help_string = f"**// Hemlo Frens CyberDoge here //**\n\n**General Info:**\n`Build Version: Pre-Release V0.3 {username}`Github Repository: `Private as it is still under development \(^^)/ \n\n**System Specifications:**\n{specs}\n```Python: {sys.version}```\n```Telethon: {__version__}```\n\n**My Creator/Developer:** [AaronPhilips](https://t.me/AaronPhilips101) \n**Support group:** [Join](https://t.me/CyberDoge_Support)"
     await client.send_file(
         event.chat_id,
         caption=help_string,
