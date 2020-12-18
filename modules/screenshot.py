@@ -6,9 +6,6 @@ import requests
 from selenium import webdriver
 from validators.url import url
 
-
-@bot.on(admin_cmd(pattern="ss (.*)"))
-@bot.on(sudo_cmd(pattern="ss (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
