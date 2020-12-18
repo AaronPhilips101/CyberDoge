@@ -6,12 +6,11 @@ import requests
 from selenium import webdriver
 from validators.url import url
 
-from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import CMD_HELP
 
 
 @client.on(events(pattern="ss (.*)"))
-@client.on(events(pattern="ss (.*)", allow_sudo=True))
+@client.on(events(pattern="ss (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -78,7 +77,7 @@ async def _(event):
 
 
 @client.on(events(pattern="scapture (.*)"))
-@client.on(events(pattern="scapture (.*)", allow_sudo=True))
+@client.on(events(pattern="scapture (.*)"))
 async def _(event):
     if event.fwd_from:
         return
