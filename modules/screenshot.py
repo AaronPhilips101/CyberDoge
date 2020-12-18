@@ -70,9 +70,6 @@ async def _(event):
     except Exception:
         await catevent.edit(f"`{traceback.format_exc()}`")
 
-
-@bot.on(admin_cmd(pattern="scapture (.*)"))
-@bot.on(sudo_cmd(pattern="scapture (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
