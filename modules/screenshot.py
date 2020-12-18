@@ -11,7 +11,7 @@ from validators.url import url
 @client.on(events(pattern="ss (.*)"))
 async def _(event):
     
-    catevent = await edit_or_reply(event, "`Processing ...`")
+    catevent = await event.edit("`Processing ...`")
     start = datetime.now()
     try:
         chrome_options = webdriver.ChromeOptions()
