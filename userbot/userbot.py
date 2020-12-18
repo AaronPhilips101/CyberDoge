@@ -78,32 +78,4 @@ class Userbot(TelegramClient):
     def load_module(self, shortname):
         self.load_module_from_file(f"{self._module_path}/{shortname}.py")
 
-    def load_module_from_file(self, path):
-        path = Path(path)
-        shortname = path.stem
-        name = f".{self._name}.{shortname}"
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        mod.events = _events
-        mod.client = self
-        mod.humanbytes = humanbytes
-        mod.progress = progress
-        mod.time_formatter = time_formatter
-        mod.build = f"CyberDoge{time.strftime('%d%m%Y', time.localtime(os.stat('./').st_mtime))}"
-        mod.me = self.me
-        mod.logger = logging.getLogger(shortname)
-        mod.ENV = self.env
-        spec.loader.exec_module(mod)
-        self._modules[shortname] = mod
-        self._logger.info(f"Successfully loaded module {shortname}")
-
-    def remove_module(self, shortname):
-        name = self._modules[shortname].__name__
-
-        for i in reversed(range(len(self._event_builders))):
-            ev, cb = self._event_builders[i]
-            if cb.__module__ == name:
-                del self._event_builders[i]
-
-        del self._modules[shortname]
-        self._logger.info(f"Removed module {shortname}")
+   
