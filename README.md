@@ -7,10 +7,9 @@
 
 ```
 ///
-    Your Telegram account may get banned.
-    I am not responsible for any improper use of this bot
-    This bot is intended for the purpose of having fun with memes,
-    as well as efficiently managing groups.
+    I am in no way responsible if your account gets banned due to improper
+    use of the bot.
+    So proceed at your own risk and use the bot wisely.
 ///
 ```
 
@@ -55,10 +54,16 @@ cd CyberDoge
 python3 -m session
 ```
 
-- Run the above code in terminal
-- Enter APP ID, API HASH and phone number conntected to your telegram account
-- Enter login code and/or password
-- Copy the session and continue to installation
+-1. Run above code in terminal or termux app (if on android)
+-2. Enter APP ID, API HASH and phone number conntected to your telegram account
+
+- **How to get app id and hash?
+-   *Go to https://my.telegram.org
+-   *After logging in click on "Api Development Tools" and fill the form
+-   *After filling it and submitting you will get your app id and hash on the screen, just copy it and follow the remaining steps.
+
+-3. Enter login code and/or password
+-4. Copy the session and continue to installation
 
 ## Installing
 
@@ -88,7 +93,7 @@ cd The-TG-Bot
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
-python3 -m thetgbot
+python3 -m CyberDoge
 ```
 
 ## Read the docs
@@ -115,8 +120,8 @@ async def handler(event):
 
 ## Credits
 - [The-TG-Bot-V3](https://github.com/justaprudev/The-TG-Bot) (For modules)
-- [Telethon](https://github.com/LonamiWebs/Telethon) 
+- [Telethon](https://github.com/LonamiWebs/Telethon) (The Core) 
 - [Uniborg](https://github.com/SpEcHiDe/UniBorg) 
 - [FTG modules repo](https://github.com/friendly-telegram/modules-repo)
-- [Userge modules repo](https://github.com/UsergeTeam/Userge-Plugins)
+- [Userge modules repo](https://github.com/UsergeTeam/Userge-Plugins) (For modules)
 - [PPE](https://github.com/RaphielGang/Telegram-Paperplane)
