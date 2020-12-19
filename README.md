@@ -75,7 +75,7 @@ After filling it and submitting you will get your app id and hash on the screen,
 - Hit the "Deploy to Heroku" button and enter APP ID, API HASH and phone number conntected to your telegram account
 - Enter the session copied while connecting your telegram account
 - Click on the "Deploy" button on the next page
-- After the process is completed, click on "View app"
+- After the process is completed, click on "Manage app"
 - Now click on the "Resources" tab
 - Then click on the edit/pencil icon
 - Finally toggle the switch and hit confirm
