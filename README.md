@@ -56,15 +56,15 @@ python3 -m session
 
 - 1. Run above code in terminal or termux app (if on android)
 - 2. Enter APP ID, API HASH and phone number conntected to your telegram account
+- 3. Enter login code and/or password
+- 4. Copy the session and continue to installation
 
 ```
-How to get app id and hash?
+How to get APP ID and API HASH?
 Go to https://my.telegram.org
 After logging in click on "Api Development Tools" and fill the form
 After filling it and submitting you will get your app id and hash on the screen, just copy it and follow the remaining steps.
 ```
-- 3. Enter login code and/or password
-- 4. Copy the session and continue to installation
 
 ## Installing
 
