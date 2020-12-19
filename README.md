@@ -89,7 +89,7 @@ python3 -m session
 
 ```
 git clone https://github.com/AaronPhilips101/CyberDoge
-cd The-TG-Bot
+cd CyberDoge
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
@@ -116,7 +116,6 @@ async def handler(event):
 	await event.edit(event.text[1:] + " world.")
 ```
 
-- Enjoy creating your own modules :P
 
 ## Credits
 - [The-TG-Bot-V3](https://github.com/justaprudev/The-TG-Bot) (For modules)
