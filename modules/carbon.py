@@ -23,7 +23,6 @@ async def carbonize(e):
     try:
         await client.send_file(
             e.chat_id,
-            caption="@The_TG_Bot",
             file=requests.get(
                 f"https://sjprojectsapi.herokuapp.com/carbon/?text={text}&theme={theme}&bg=black").json()['link'],
             force_document=False
