@@ -6,11 +6,11 @@
 ## Disclaimer
 
 ```
-///
-    I am in no way responsible if your account gets banned due to improper
-    use of the bot.
-    So proceed at your own risk and use the bot wisely.
-///
+/*
+    *I am in no way responsible if your account gets banned due to improper
+    *use of the bot.
+    *So proceed at your own risk and use the bot wisely.
+/*
 ```
 
 
