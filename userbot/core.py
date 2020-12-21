@@ -146,7 +146,7 @@ async def help(event):
 async def alive(event):
     if event.fwd_from:
         return
-    await event.edit("**// CyberDoge is running //**\n**// Fetching userbot information //**")
+    await event.edit("**// CyberDoge is running //**\n**// Fetching my Chimken fast as pawsible //**")
     uname = platform.uname()
     username = f"\nUser: `@{me.username}\n"
     memory = psutil.virtual_memory()
