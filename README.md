@@ -1,5 +1,7 @@
 # CyberDoge
 
+## A powerful, effective and easy to use userbot based on The-TGBotV3
+
 ![LOGO](https://github.com/AaronPhilips101/CyberDoge/blob/main/logo.png?raw=true)
 
 
