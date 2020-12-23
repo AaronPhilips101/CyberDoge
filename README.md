@@ -121,7 +121,7 @@ async def handler(event):
 
 
 ## Credits
-- [The-TG-Bot-V3](https://github.com/justaprudev/The-TG-Bot) (For modules)
+- [The-TG-Bot-V3](https://github.com/justaprudev/The-TG-Bot)
 - [Telethon](https://github.com/LonamiWebs/Telethon) (The Core) 
 - [Uniborg](https://github.com/SpEcHiDe/UniBorg) 
 - [FTG modules repo](https://github.com/friendly-telegram/modules-repo)
