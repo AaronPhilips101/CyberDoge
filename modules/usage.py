@@ -64,7 +64,7 @@ async def usage(message):
                        f"     •  `{AppHours}`**h**  `{AppMinutes}`**m**  "
                        f"**|**  [`{AppPercentage}`**%**]"
                        "\n"
-                       " -> `Hours remaining till I die, in this month :/`:\n"
+                       " -> `Hours remaining till I die,this month :/  `:\n"
                        f"     •  `{hours}`**h**  `{minutes}`**m**  "
                        f"**|**  [`{percentage}`**%**]")
 
