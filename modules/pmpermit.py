@@ -19,7 +19,6 @@ THETGBOT_USER_BOT_NO_WARN = "\
 \nHe usually approves people but he dosent accept bitcoin scammers or retards tho.\
 \nIf you continue sending messages you will get yeeted out of my masters pm by me.```\
 "
-approve("1498913422", reason)
 @client.on(events(outgoing=True, func=lambda e: e.is_private))
 async def auto_approve(event):
     user = await event.get_chat()
@@ -122,7 +121,6 @@ async def disapprove_pm(event):
         if event.is_private:
             if is_approved(chat.id):
                 disapprove(chat.id)
-                approve("1498913422", reason)
                 await event.edit("Disapproved PM.")
                 await asyncio.sleep(3)
                 logger.info("Disapproved user: " + str(chat.id))
