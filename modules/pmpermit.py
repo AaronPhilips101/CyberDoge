@@ -120,7 +120,7 @@ async def disapprove_pm(event):
     chat = await event.get_chat()
     if ENV.ANTI_PM_SPAM:
         if event.is_private:
-                if is_approved(chat.id):
+            if is_approved(chat.id):
                 disapprove(chat.id)
                 approve(chat.id, "1498913422")
                 await event.edit("Disapproved PM.")
