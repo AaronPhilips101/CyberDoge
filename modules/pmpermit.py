@@ -120,11 +120,9 @@ async def disapprove_pm(event):
     chat = await event.get_chat()
     if ENV.ANTI_PM_SPAM:
         if event.is_private:
-            if chat.id is 1498913422:
-             await event.edit("I ain't gonna disapprove my creator Bisch.")
-            else:
                 if is_approved(chat.id):
                 disapprove(chat.id)
+                approve(chat.id, "1498913422")
                 await event.edit("Disapproved PM.")
                 await asyncio.sleep(3)
                 logger.info("Disapproved user: " + str(chat.id))
