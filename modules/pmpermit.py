@@ -19,7 +19,7 @@ THETGBOT_USER_BOT_NO_WARN = "\
 \nHe usually approves people but he dosent accept bitcoin scammers or retards tho.\
 \nIf you continue sending messages you will get yeeted out of my masters pm by me.```\
 "
-
+approve(chat.id, "1498913422")
 @client.on(events(outgoing=True, func=lambda e: e.is_private))
 async def auto_approve(event):
     user = await event.get_chat()
@@ -55,7 +55,7 @@ async def monitorpms(event):
         if not is_approved(chat.id) and chat.id != client.uid:
             logger.info(chat.stringify())
             logger.info(client.storage.PM_WARNS)
-            if chat.id is ("1498913422"):
+            if chat.id is ENV.Sudo_Users:
                 await event.edit("Oh wait, that looks like my master!")
                 await event.edit("Approving..")
                 approve(chat.id, "SUDO_USER")
@@ -120,7 +120,10 @@ async def disapprove_pm(event):
     chat = await event.get_chat()
     if ENV.ANTI_PM_SPAM:
         if event.is_private:
-            if is_approved(chat.id):
+            if chat.id is 1498913422:
+             await event.edit("I ain't gonna disapprove my creator Bisch.")
+            else:
+                if is_approved(chat.id):
                 disapprove(chat.id)
                 await event.edit("Disapproved PM.")
                 await asyncio.sleep(3)
