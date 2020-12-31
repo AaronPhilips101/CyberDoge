@@ -54,7 +54,7 @@ async def monitorpms(event):
         if not is_approved(chat.id) and chat.id != client.uid:
             logger.info(chat.stringify())
             logger.info(client.storage.PM_WARNS)
-            if chat.id is ENV.Sudo_Users:
+            if chat.id in ENV.SUDO_USERS:
                 await event.edit("Oh wait, that looks like my master!")
                 await event.edit("Approving..")
                 approve(chat.id, "SUDO_USER")
