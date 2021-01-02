@@ -2,6 +2,9 @@
 #Created By @itexpert120
 #Modifyed By @AaronPhilips101
 
+import random
+import time
+
 @client.on(events("die ?(.*)"))
 async def handler(event):
     if event.fwd_from:
