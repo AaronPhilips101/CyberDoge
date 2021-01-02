@@ -2,7 +2,7 @@
 #Created By @itexpert120
 #Modifyed By @AaronPhilips101
 
-@client.on(events("coinflip ?(.*)"))
+@client.on(events("die ?(.*)"))
 async def handler(event):
     if event.fwd_from:
         return
