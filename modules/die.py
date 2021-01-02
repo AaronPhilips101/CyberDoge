@@ -12,7 +12,7 @@ async def handler(event):
     x = random.randint(1, 6)
     await event.edit("Rolling Dice")
     time.sleep(1)
-    await event.edit("The Die is: {x}")
+    await event.edit(f"The Die is: {x}")
 
 
 ENV.HELPER.update({
