@@ -19,4 +19,3 @@ ENV.HELPER.update({
 \nUsage: Roll a Dice.\
 "
 })
-```
