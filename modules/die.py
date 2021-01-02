@@ -7,10 +7,9 @@ async def handler(event):
     if event.fwd_from:
         return
     x = random.randint(1, 6)
-       event.edit("Rolling Dice")
-time.sleep(1)
-
-       event.edit(f"The Die is: {x}")
+    await event.edit("Rolling Dice")
+    time.sleep(1)
+    await event.edit("The Die is: {x}")
 
 
 ENV.HELPER.update({
