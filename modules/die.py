@@ -1,6 +1,6 @@
 #Die Module for CyberDoge
 #Created By @itexpert120
-#Modifyed By @AaronPhilips101
+#Modified By @AaronPhilips101
 
 import random
 import time
