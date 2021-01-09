@@ -13,11 +13,11 @@ BAALAJI_TG_USER_BOT = "```My Master hasn't approved you to PM.```"
 TG_COMPANION_USER_BOT = "```Wait for my masters response.\nDo not spam his pm if you do not want to get yeeted out of my masters pm.```"
 THETGBOT_USER_BOT_WARN_ZERO = "```Thanks for the spam hooman, now get yeeted out of this pm bisch.```"
 THETGBOT_USER_BOT_NO_WARN = "\
-```woof woof CyberDoge here.\
+```Bleep blop! This is a bot. Don't fret.\
 \nMy master hasn't approved you to PM.\
-\nPlease wait for my master to approve you.\
-\nHe usually approves people but he dosent accept bitcoin scammers or retards tho.\
-\nIf you continue sending messages you will get yeeted out of my masters pm by me.```\
+\nPlease wait for my master to look in, he mostly approves PMs.\
+\nAs far as I know, he doesn't usually approve retards though.\
+\nIf you continue sending messages you will be yeeted from this pm.```\
 "
 @client.on(events(outgoing=True, func=lambda e: e.is_private))
 async def auto_approve(event):
