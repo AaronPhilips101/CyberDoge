@@ -126,7 +126,7 @@ async def handler(event):
     else:
         try:
             await client.kick_participant(event.chat_id, participant)
-            await event.edit(f"{await user(participant)} has been yeeted into the outerspace by my master!")
+            await event.edit(f"{await user_entity(participant)} has been yeeted into the outerspace by my master!")
         except (Exception) as exc:
             await event.edit(str(exc))
 
