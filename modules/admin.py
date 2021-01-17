@@ -4,7 +4,7 @@
 
 from telethon.tl.functions.users import GetFullUserRequest
 
-SUDO_STR = "**Wish i could {0} admemes, perhaps a bork? *woof woof!**"
+SUDO_STR = "**Wish i could {0} admemes, perhaps a bork?!**"
 NO_USER = "Who do you want me to {0} master?!"
 
 @client.on(events(pattern="promote ?(.*)"))
@@ -61,7 +61,7 @@ async def handler(event):
     else:
         try:
             await client.edit_permissions(event.chat_id, participant, view_messages=False)
-            await event.edit(f"Haha, {await user_entity(participant)} is bammed by CyberDoge for not obeying laws of chimken!")
+            await event.edit(f"Haha, {await user_entity(participant)} is banned by my master cuz he was an idiot.!")
         except (Exception) as exc:
             await event.edit(str(exc))
 
