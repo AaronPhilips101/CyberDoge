@@ -33,7 +33,7 @@ async def handler(event):
     if not event.is_reply:
         await event.edit("Reply to a photo/sticker to kang it.")
         return
-    await event.edit("```Me kanging your shitty stickers and you can't do anything about that shitty hooman...```")
+    await event.edit("```Me kanging your stickers and you can't do anything about that...```")
     reply_message = await event.get_reply_message()
     sticker_emoji = "🔥"
     pack_id = ""
