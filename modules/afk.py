@@ -79,9 +79,9 @@ async def on_afk(event):
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = f"**My master have been AFK since** {afk_since} " + \
-            f"**cuz {reason}.**" \
+            f"**\n \n Reason: {reason}.**" \
             if reason \
-            else f"**My master have been AFK since** {afk_since}, so dont ping or spam my master for useless shit else CyberDoge will yeet you to outerspace."
+            else f"**My master have been AFK since** {afk_since} **\n \n Reason: Not Specified =_=**"
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in client.storage.last_afk_message:
