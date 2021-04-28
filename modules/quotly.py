@@ -18,7 +18,7 @@ async def handler(event):
         quote = reply
     else:
         return
-    username = "@QuotLyBot"
+    username = "@Quot2LyBot"
     await event.edit(f"```Quoting this message as phast as pawsible \(^^)/...```")
     async with client.conversation(username, timeout=10) as bot_conv:
         try:
@@ -36,7 +36,7 @@ async def handler(event):
             await event.reply(response)
             await event.delete()
         except:
-            return await event.edit("`@QuotLyBot doesn't want to talk to me, try again later.`")
+            return await event.edit("`@Quot2LyBot doesn't want to talk to me, try again later.`")
 
 
 async def silently_send_message(conv, text):
